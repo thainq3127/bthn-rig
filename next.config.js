@@ -5,6 +5,11 @@
 import "./src/env.js";
 
 /** @type {import("next").NextConfig} */
-const config = {};
+const config = {
+  webpack: (config) => {
+    config.externals.push("serialport", "johnny-five");
+    return config;
+  },
+};
 
 export default config;
