@@ -5,7 +5,7 @@ Provide project context and coding guidelines that AI should follow when generat
 
 1. **Project Context**:
    - Đây là 1 dự án điều khiển chụp ảnh tự động sử dụng SmartShooter API và 1 bàn xoay vật lý kết nối qua Arduino qua serialport.
-
+   - Máy tính được kết nối với 1 chiếc arduino uno qua cổng USB (serial port), arduino kết nối với cnc shield v3, 1 stepper motor kết nối với cnc shield ở A header.
 2. **Coding Guidelines**:
    - Project sử dụng api trpc, tailwindcss, yarn, nextjs.
    - Write clear, maintainable code with appropriate comments.

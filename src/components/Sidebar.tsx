@@ -6,6 +6,7 @@ import { useSerialPorts } from '~/hooks/useSerialPorts';
 import { useSerialPortConnection } from '~/hooks/useSerialPortConnection';
 import { SerialPortSelect } from '~/components/SerialPortSelect';
 import { SerialPortCard } from '~/components/SerialPortCard';
+import { StepperControl } from '~/components/StepperControl';
 import { TRPCStatus } from '~/components/TRPCStatus';
 
 type ViewMode = 'select' | 'cards';
@@ -187,6 +188,12 @@ export function Sidebar() {
             )}
           </div>
         )}
+
+        {/* Stepper Motor Control */}
+        <StepperControl 
+          isConnected={!!selectedPort && (connectionResult?.includes('Success') ?? false)}
+          selectedPort={selectedPort}
+        />
       </div>
 
       {/* Footer */}
